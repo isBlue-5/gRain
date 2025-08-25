@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 	"github.com/stretchr/testify/assert"
 )
 

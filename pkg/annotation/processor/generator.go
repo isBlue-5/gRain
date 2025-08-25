@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // Generator 代码生成器主类

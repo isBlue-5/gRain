@@ -6,9 +6,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/pkg/core/app"
-	"github.com/grain-framework/grain/pkg/web/middleware"
-	"github.com/grain-framework/grain/pkg/web/render"
+	"github.com/isBlue-5/grain/pkg/core/app"
+	"github.com/isBlue-5/grain/pkg/web/middleware"
+	"github.com/isBlue-5/grain/pkg/web/render"
 )
 
 func main() {

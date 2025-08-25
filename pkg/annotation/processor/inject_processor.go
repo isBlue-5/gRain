@@ -12,8 +12,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
-	anntypes "github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
+	anntypes "github.com/isBlue-5/grain/pkg/annotation/types"
 	"golang.org/x/tools/go/packages"
 )
 

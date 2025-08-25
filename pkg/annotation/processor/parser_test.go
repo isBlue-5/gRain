@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/grain-framework/grain/pkg/annotation/processor"
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/processor"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

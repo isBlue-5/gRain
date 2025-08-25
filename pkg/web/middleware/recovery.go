@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/pkg/core/errors"
-	"github.com/grain-framework/grain/pkg/web/render"
+	"github.com/isBlue-5/grain/pkg/core/errors"
+	"github.com/isBlue-5/grain/pkg/web/render"
 )
 
 // RecoveryConfig 恢复中间件配置

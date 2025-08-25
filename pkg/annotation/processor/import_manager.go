@@ -189,7 +189,7 @@ func (im *ImportManager) checkCircularDependencies() {
 
 	// 检查自引用
 	for path := range im.imports {
-		if strings.Contains(path, "github.com/grain-framework/grain") {
+		if strings.Contains(path, "github.com/isBlue-5/grain") {
 			// 检查是否是内部循环引用
 			if strings.Contains(path, "/pkg/") && strings.Contains(path, "/internal/") {
 				fmt.Printf("警告: 检测到可能的循环依赖: %s\n", path)
@@ -255,7 +255,7 @@ func (im *ImportManager) GenerateImportBlock() string {
 		path := extractPathFromImport(imp)
 		if isStandardLibrary(path) {
 			stdLibs = append(stdLibs, imp)
-		} else if strings.Contains(path, "github.com/grain-framework/grain") {
+		} else if strings.Contains(path, "github.com/isBlue-5/grain") {
 			local = append(local, imp)
 		} else {
 			thirdParty = append(thirdParty, imp)

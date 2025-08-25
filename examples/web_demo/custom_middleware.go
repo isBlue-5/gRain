@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/pkg/web/middleware"
+	"github.com/isBlue-5/grain/pkg/web/middleware"
 )
 
 // TimingMiddleware 统计请求耗时的中间件

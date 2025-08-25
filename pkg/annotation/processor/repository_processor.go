@@ -9,8 +9,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // RepositoryProcessor 仓库注解处理器
@@ -55,7 +55,7 @@ import (
 	{{range $alias, $path := .Imports}}
 	{{$alias}} "{{$path}}"
 	{{end}}
-	"github.com/grain-framework/grain/pkg/data"
+	"github.com/isBlue-5/grain/pkg/data"
 )
 
 // {{.Name}}Repository {{.Name}}仓库接口

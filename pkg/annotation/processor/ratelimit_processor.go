@@ -8,8 +8,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // RateLimitProcessor 限流注解处理器
@@ -258,7 +258,7 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/pkg/annotation/processor"
+	"github.com/isBlue-5/grain/pkg/annotation/processor"
 )
 
 // {{.WrappedName}} 限流包装方法

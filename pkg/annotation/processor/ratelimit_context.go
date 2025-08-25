@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grain-framework/grain/pkg/ratelimit"
+	"github.com/isBlue-5/grain/pkg/ratelimit"
 )
 
 // RateLimitManager 限流器管理器

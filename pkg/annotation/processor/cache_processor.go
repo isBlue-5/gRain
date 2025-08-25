@@ -9,8 +9,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // CacheProcessor 缓存注解处理器
@@ -33,7 +33,7 @@ import (
 	"time"
 	"encoding/json"
 
-	"github.com/grain-framework/grain/pkg/cache"
+	"github.com/isBlue-5/grain/pkg/cache"
 )
 
 {{if .IsMethod}}

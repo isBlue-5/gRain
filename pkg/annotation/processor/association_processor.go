@@ -9,8 +9,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // AssociationProcessor 关联关系处理器，用于处理实体之间的关联关系

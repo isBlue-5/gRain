@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/grain-framework/grain/examples/query"
+	"github.com/isBlue-5/grain/examples/query"
 )
 
 func main() {

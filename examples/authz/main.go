@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/pkg/auth"
-	"github.com/grain-framework/grain/pkg/authz"
+	"github.com/isBlue-5/grain/pkg/auth"
+	"github.com/isBlue-5/grain/pkg/authz"
 )
 
 // 模拟用户数据

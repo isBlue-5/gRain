@@ -12,8 +12,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
-	anntypes "github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
+	anntypes "github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // CRUDProcessor CRUD代码生成处理器
@@ -681,7 +681,7 @@ import (
 	{{range .Imports}}
 	"{{.}}"
 	{{end}}
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // {{.EntityName}}Service 定义{{.EntityName}}服务接口

@@ -13,7 +13,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // AnnotationParser 注解解析器接口

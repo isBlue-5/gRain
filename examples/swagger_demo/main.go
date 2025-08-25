@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/pkg/annotation/processor"
-	"github.com/grain-framework/grain/pkg/annotation/registry"
+	"github.com/isBlue-5/grain/pkg/annotation/processor"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
 )
 
 // User 用户模型

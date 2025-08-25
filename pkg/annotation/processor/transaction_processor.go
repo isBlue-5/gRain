@@ -9,7 +9,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // TransactionProcessor 事务注解处理器
@@ -31,7 +31,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/grain-framework/grain/pkg/data"
+	"github.com/isBlue-5/grain/pkg/data"
 )
 
 {{if .IsMethod}}
@@ -861,7 +861,7 @@ package %s
 
 import (
 	"time"
-	"github.com/grain-framework/grain/pkg/data/transaction"
+	"github.com/isBlue-5/grain/pkg/data/transaction"
 )
 
 // TransactionConfig 事务配置

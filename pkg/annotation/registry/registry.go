@@ -2,7 +2,7 @@
 package registry
 
 import (
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // Registry 注解注册中心

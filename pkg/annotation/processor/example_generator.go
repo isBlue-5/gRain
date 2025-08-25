@@ -43,7 +43,7 @@ func (eg *ExampleGenerator) initializeTemplates() {
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/pkg/web"
+	"github.com/isBlue-5/grain/pkg/web"
 )
 
 func main() {
@@ -74,7 +74,7 @@ func (c *HelloController) Hello(ctx *gin.Context) {
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/pkg/web"
+	"github.com/isBlue-5/grain/pkg/web"
 )
 
 func main() {
@@ -95,7 +95,7 @@ type User struct {
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/examples/user_management/services"
+	"github.com/isBlue-5/grain/examples/user_management/services"
 )
 
 // @frame:controller
@@ -123,8 +123,8 @@ func (c *UserController) CreateUser(ctx *gin.Context) {
 			"services/user_service.go": `package services
 
 import (
-	"github.com/grain-framework/grain/examples/user_management/models"
-	"github.com/grain-framework/grain/examples/user_management/repositories"
+	"github.com/isBlue-5/grain/examples/user_management/models"
+	"github.com/isBlue-5/grain/examples/user_management/repositories"
 )
 
 // @frame:service
@@ -144,7 +144,7 @@ func (s *UserService) CreateUser(user *models.User) *models.User {
 			"repositories/user_repository.go": `package repositories
 
 import (
-	"github.com/grain-framework/grain/examples/user_management/models"
+	"github.com/isBlue-5/grain/examples/user_management/models"
 )
 
 // @frame:repository
@@ -166,7 +166,7 @@ func (r *UserRepository) Save(user *models.User) *models.User {
 		},
 		Dependencies: []string{
 			"github.com/gin-gonic/gin",
-			"github.com/grain-framework/grain/pkg/web",
+			"github.com/isBlue-5/grain/pkg/web",
 		},
 	}
 }

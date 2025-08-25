@@ -62,7 +62,7 @@ else
         echo "✅ 代码生成完成"
     else
         echo "⚠️  警告: ginframe-gen 工具未安装，跳过代码生成"
-        echo "   请运行: go install github.com/grain-framework/grain/cmd/ginframe-gen@latest"
+        echo "   请运行: go install github.com/isBlue-5/grain/cmd/ginframe-gen@latest"
     fi
 fi
 

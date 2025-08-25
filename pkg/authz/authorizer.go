@@ -3,7 +3,7 @@ package authz
 import (
 	"strings"
 
-	"github.com/grain-framework/grain/pkg/auth"
+	"github.com/isBlue-5/grain/pkg/auth"
 )
 
 // Authorizer 授权决策接口

@@ -12,7 +12,7 @@ import (
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/grain-framework/grain/pkg/data"
+	"github.com/isBlue-5/grain/pkg/data"
 )
 
 // 初始化数据库和服务

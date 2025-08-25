@@ -3,8 +3,8 @@ package processor
 import (
 	"testing"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 	"github.com/stretchr/testify/assert"
 )
 

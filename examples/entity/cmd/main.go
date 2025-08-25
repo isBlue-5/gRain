@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/grain-framework/grain/examples/entity"
+	"github.com/isBlue-5/grain/examples/entity"
 )
 
 func main() {

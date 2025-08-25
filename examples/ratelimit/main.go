@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/pkg/ratelimit"
+	"github.com/isBlue-5/grain/pkg/ratelimit"
 )
 
 func main() {

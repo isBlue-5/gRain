@@ -176,37 +176,55 @@ func (c *MainController) HealthCheck(ctx *gin.Context) {
 }
 
 func main() {
-    // Create application with options
-    // 使用选项模式创建应用
-    application := app.New(
+    // 创建应用实例 - 就是这么简单！
+    // Create application instance - it's that simple!
+    app := app.New(
         app.WithPort("8080"),
-        app.WithHost("0.0.0.0"),
-        app.WithShutdownTimeout(30),
+        app.WithDebug(true),
+        app.WithAutoGenerate(true), // 启用自动代码生成 | Enable auto code generation
     )
-    
-    // Add routes
-    // 添加路由
-    router := gin.Default()
-    
-    // Run application
-    // 运行应用
-    application.Run()
+
+    // 运行应用 - 框架会自动处理一切！
+    // Run application - framework handles everything automatically!
+    app.Run()
 }
 ```
 
-### 🔧 Generate Code | 生成代码
+### ✨ 开箱即用 | Out of the Box
+
+**无需运行任何命令！框架会在应用启动时自动完成所有工作：**
+
+**No commands needed! Framework automatically completes all work when application starts:**
+
+- 🔧 **自动代码生成** - 扫描注解，生成依赖注入和路由注册代码
+- 🔧 **Auto Code Generation** - Scan annotations, generate dependency injection and route registration code
+
+- 🛣️ **自动路由注册** - 根据注解自动注册所有API路由
+- 🛣️ **Auto Route Registration** - Automatically register all API routes based on annotations
+
+- 📚 **自动文档生成** - 生成完整的OpenAPI 3.0规范和Swagger UI
+- 📚 **Auto Documentation** - Generate complete OpenAPI 3.0 specification and Swagger UI
+
+- 🔄 **自动依赖注入** - 编译时依赖注入，零反射开销
+- 🔄 **Auto Dependency Injection** - Compile-time dependency injection, zero reflection overhead
+
+### 🔧 传统方式（可选）| Traditional Way (Optional)
+
+如果您需要手动控制代码生成过程：
+
+If you need manual control over the code generation process:
 
 ```bash
-# Install code generation tool
 # 安装代码生成工具
+# Install code generation tool
 go install github.com/isBlue-5/gRain/cmd/ginframe-gen@latest
 
-# Generate dependency injection and route registration
 # 生成依赖注入和路由注册代码
+# Generate dependency injection and route registration code
 go generate ./...
 
-# Or use directly
 # 或直接使用
+# Or use directly
 ginframe-gen -pkg ./controllers -output ./generated
 ```
 

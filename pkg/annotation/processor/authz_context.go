@@ -5,7 +5,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/grain-framework/grain/pkg/authz"
+	"github.com/isBlue-5/grain/pkg/authz"
 )
 
 // AuthzContextKey 授权器上下文键

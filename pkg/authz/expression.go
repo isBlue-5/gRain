@@ -7,7 +7,7 @@ import (
 	"strings"
 	"text/scanner"
 
-	"github.com/grain-framework/grain/pkg/auth"
+	"github.com/isBlue-5/grain/pkg/auth"
 )
 
 // ExpressionEngine 权限表达式引擎

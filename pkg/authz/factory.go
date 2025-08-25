@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grain-framework/grain/pkg/auth"
+	"github.com/isBlue-5/grain/pkg/auth"
 )
 
 // NewAuthorizer 创建授权决策器

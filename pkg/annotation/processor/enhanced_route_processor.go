@@ -9,8 +9,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
-	"github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
+	"github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // EnhancedRouteProcessor 增强的路由处理器
@@ -564,7 +564,7 @@ func (p *EnhancedRouteProcessor) addRequiredImports(controllerInfo *EnhancedRout
 	// 根据路由信息添加必要的导入
 	for _, route := range controllerInfo.Routes {
 		if route.Auth != nil && (len(route.Auth.RequiredRoles) > 0 || len(route.Auth.RequiredPermissions) > 0) {
-			controllerInfo.Imports["github.com/grain-framework/grain/pkg/auth"] = ""
+			controllerInfo.Imports["github.com/isBlue-5/grain/pkg/auth"] = ""
 		}
 
 		if route.Validation != nil && route.Validation.Rules != "" {

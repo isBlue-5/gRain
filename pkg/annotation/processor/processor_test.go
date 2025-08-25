@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
 )
 
 // TestRateLimitProcessor 测试限流处理器

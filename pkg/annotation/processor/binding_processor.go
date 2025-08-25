@@ -8,8 +8,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
-	anntypes "github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
+	anntypes "github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // BindingProcessor 处理绑定注解
@@ -158,9 +158,9 @@ func (p *BindingProcessor) generateBindingCode(pkgPath, controller string, metho
 		PackageName: BindingPackageGenerator.GetPackageName(pkgPath),
 		Imports: []string{
 			"github.com/gin-gonic/gin",
-			"github.com/grain-framework/grain/pkg/web/binding",
-			"github.com/grain-framework/grain/pkg/web/validate",
-			"github.com/grain-framework/grain/pkg/web/render",
+			"github.com/isBlue-5/grain/pkg/web/binding",
+			"github.com/isBlue-5/grain/pkg/web/validate",
+			"github.com/isBlue-5/grain/pkg/web/render",
 		},
 		ControllerName: controller,
 		Methods:        methods,

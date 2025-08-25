@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/grain-framework/grain/examples/annotation/controller"
+	"github.com/isBlue-5/grain/examples/annotation/controller"
 )
 
 // UserRepository 用户存储接口

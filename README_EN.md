@@ -7,8 +7,8 @@
 
 [![Go Version](https://img.shields.io/badge/Go-1.21+-blue.svg)](https://golang.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com/yourusername/gRain)
-[![Coverage](https://img.shields.io/badge/Coverage-90%25-brightgreen.svg)](https://github.com/yourusername/gRain)
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com/isBlue-5/gRain)
+[![Coverage](https://img.shields.io/badge/Coverage-90%25-brightgreen.svg)](https://github.com/isBlue-5/gRain)
 
 ## 🚀 Overview
 
@@ -131,7 +131,7 @@ type AppConfig struct {
 ### 📦 Installation
 
 ```bash
-go get -u github.com/yourusername/gRain
+go get -u github.com/isBlue-5/gRain
 ```
 
 ### 🎯 Create Your First Application
@@ -140,7 +140,7 @@ go get -u github.com/yourusername/gRain
 package main
 
 import (
-    "github.com/yourusername/gRain/pkg/core/app"
+    "github.com/isBlue-5/gRain/pkg/core/app"
     "github.com/gin-gonic/gin"
 )
 
@@ -173,7 +173,7 @@ func main() {
 
 ```bash
 # Install code generation tool
-go install github.com/yourusername/gRain/cmd/ginframe-gen@latest
+go install github.com/isBlue-5/gRain/cmd/ginframe-gen@latest
 
 # Generate dependency injection and route registration
 go generate ./...
@@ -663,4 +663,4 @@ gRain is released under the MIT License. See [LICENSE](LICENSE) file for details
 
 **Built with ❤️ for the Go community**
 
-[GitHub](https://github.com/yourusername/gRain) | [Issues](https://github.com/yourusername/gRain/issues) | [Discussions](https://github.com/yourusername/gRain/discussions) 
+[GitHub](https://github.com/isBlue-5/gRain) | [Issues](https://github.com/isBlue-5/gRain/issues) | [Discussions](https://github.com/isBlue-5/gRain/discussions) 

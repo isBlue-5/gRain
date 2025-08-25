@@ -5,7 +5,7 @@ go 1.24.2
 require (
 	github.com/gin-gonic/gin v1.10.1
 	github.com/golang-jwt/jwt/v5 v5.2.3
-	github.com/grain-framework/grain v0.0.0-00010101000000-000000000000
+	github.com/isBlue-5/grain v0.0.0-00010101000000-000000000000
 	github.com/joho/godotenv v1.4.0
 	github.com/stretchr/testify v1.10.0
 	gorm.io/driver/mysql v1.6.0
@@ -15,7 +15,7 @@ require (
 )
 
 // 使用相对路径引用本地gRain框架
-replace github.com/grain-framework/grain => ../../
+replace github.com/isBlue-5/grain => ../../
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect

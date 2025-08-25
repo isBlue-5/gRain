@@ -3,7 +3,7 @@ package processor
 import (
 	"testing"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
 )
 
 // BenchmarkAnnotationParsing 注解解析性能基准测试

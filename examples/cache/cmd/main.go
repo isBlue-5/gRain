@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/grain-framework/grain/examples/cache"
+	"github.com/isBlue-5/grain/examples/cache"
 )
 
 func main() {

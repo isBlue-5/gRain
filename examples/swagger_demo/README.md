@@ -73,7 +73,7 @@ type CreateUserRequest struct {
 ```bash
 go mod init swagger_demo
 go get github.com/gin-gonic/gin
-go get github.com/grain-framework/grain
+go get github.com/isBlue-5/grain
 ```
 
 ### 2. 运行示例

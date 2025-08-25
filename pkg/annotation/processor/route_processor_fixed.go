@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/grain-framework/grain/pkg/annotation/registry"
-	anntypes "github.com/grain-framework/grain/pkg/annotation/types"
+	"github.com/isBlue-5/grain/pkg/annotation/registry"
+	anntypes "github.com/isBlue-5/grain/pkg/annotation/types"
 )
 
 // FixedRouteProcessor 修复后的路由处理器，解决重复声明问题

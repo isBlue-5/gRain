@@ -7,8 +7,8 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/examples/annotation/controller"
-	"github.com/grain-framework/grain/examples/annotation/service"
+	"github.com/isBlue-5/grain/examples/annotation/controller"
+	"github.com/isBlue-5/grain/examples/annotation/service"
 )
 
 func main() {

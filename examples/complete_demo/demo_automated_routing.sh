@@ -12,7 +12,7 @@ echo "   - 路由仍需要手动注册 ❌"
 echo ""
 
 echo "🔧 步骤1：安装 gRain 代码生成工具"
-echo "   go install github.com/grain-framework/grain/cmd/ginframe-gen@latest"
+echo "   go install github.com/isBlue-5/grain/cmd/ginframe-gen@latest"
 echo ""
 
 echo "🔧 步骤2：运行代码生成器"

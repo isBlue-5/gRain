@@ -4,7 +4,7 @@ package main
 import (
 	"log"
 
-	"github.com/grain-framework/grain/examples/gorm"
+	"github.com/isBlue-5/grain/examples/gorm"
 )
 
 func main() {

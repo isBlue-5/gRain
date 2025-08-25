@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/grain-framework/grain/pkg/auth"
+	"github.com/isBlue-5/grain/pkg/auth"
 )
 
 // AuthorizationConfig 授权配置

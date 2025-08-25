@@ -8,7 +8,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/sessions"
-	"github.com/grain-framework/grain/pkg/auth"
+	"github.com/isBlue-5/grain/pkg/auth"
 )
 
 // User represents a simple user model

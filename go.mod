@@ -1,4 +1,4 @@
-module github.com/grain-framework/grain
+module github.com/isBlue-5/grain
 
 go 1.24.2
 

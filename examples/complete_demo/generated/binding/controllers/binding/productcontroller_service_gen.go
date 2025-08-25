@@ -4,11 +4,11 @@ package controllers
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/grain-framework/grain/pkg/web/binding"
+	"github.com/isBlue-5/grain/pkg/web/binding"
 
-	"github.com/grain-framework/grain/pkg/web/validate"
+	"github.com/isBlue-5/grain/pkg/web/validate"
 
-	"github.com/grain-framework/grain/pkg/web/render"
+	"github.com/isBlue-5/grain/pkg/web/render"
 )
 
 // 绑定包装器，为控制器方法添加请求绑定和验证功能
