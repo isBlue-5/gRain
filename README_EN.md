@@ -1,5 +1,8 @@
 # gRain - Go Enterprise Web Framework
 
+
+**go/(gin) Registration annotation-driven injection framework**
+
 > **Convention over Configuration, Performance without Compromise**
 
 [![Go Version](https://img.shields.io/badge/Go-1.21+-blue.svg)](https://golang.org)

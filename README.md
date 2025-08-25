@@ -1,6 +1,9 @@
 # gRain - Go Enterprise Web Framework
 # gRain - Go企业级Web框架
 
+**go/(gin) Registration annotation-driven injection framework**
+
+
 > **Convention over Configuration, Performance without Compromise**  
 > **约定大于配置，性能不受影响**
 
