@@ -1,0 +1,201 @@
+package processor
+
+import (
+	"go/ast"
+	"go/parser"
+	"go/token"
+	"strings"
+	"testing"
+)
+
+func TestTypeResolver_ExtractStructComment(t *testing.T) {
+	// 测试代码
+	testCode := `
+package models
+
+// User 定义了系统中的用户模型
+type User struct {
+    // 用户ID，数据库自增主键
+    ID uint \`json:"id" example:"1"\` 
+    
+    // 用户名，必须是唯一的
+    Username string \`json:"username" binding:"required" example:"johndoe"\` 
+
+    // 用户角色，例如：ADMIN, USER
+    Role string \`json:"role,omitempty" example:"USER"\`
+
+    // 用户状态 (0: 禁用, 1: 启用)
+    Status int \`json:"status" default:"1" validate:"oneof=0 1"\`
+}
+
+// Profile 定义了用户的详细资料
+type Profile struct {
+    // 真实姓名
+    RealName string \`json:"realName" example:"John Doe"\`
+    // 年龄
+    Age int \`json:"age" example:"30"\`
+}
+`
+
+	// 解析代码
+	fset := token.NewFileSet()
+	file, err := parser.ParseFile(fset, "test.go", testCode, parser.ParseComments)
+	if err != nil {
+		t.Fatalf("Failed to parse test code: %v", err)
+	}
+
+	// 创建类型解析器
+	resolver := NewTypeResolver(".")
+
+	// 手动构建包信息
+	pkg := &ast.Package{
+		Name:  "models",
+		Files: map[string]*ast.File{"test.go": file},
+	}
+	resolver.packages["models"] = pkg
+
+	// 测试解析User类型
+	userSchema, err := resolver.ResolveType("models.User")
+	if err != nil {
+		t.Fatalf("Failed to resolve User type: %v", err)
+	}
+
+	// 验证结构体注释
+	expectedComment := "User 定义了系统中的用户模型"
+	if userSchema.Description != expectedComment {
+		t.Errorf("Expected User description '%s', got '%s'", expectedComment, userSchema.Description)
+	}
+
+	// 验证字段注释
+	if userSchema.Properties["id"].Description != "用户ID，数据库自增主键" {
+		t.Errorf("Expected ID description '用户ID，数据库自增主键', got '%s'", userSchema.Properties["id"].Description)
+	}
+
+	if userSchema.Properties["username"].Description != "用户名，必须是唯一的" {
+		t.Errorf("Expected Username description '用户名，必须是唯一的', got '%s'", userSchema.Properties["username"].Description)
+	}
+
+	// 验证必需字段
+	if !contains(userSchema.Required, "username") {
+		t.Error("Expected 'username' to be required")
+	}
+
+	// 验证示例值
+	if userSchema.Properties["id"].Example != "1" {
+		t.Errorf("Expected ID example '1', got '%v'", userSchema.Properties["id"].Example)
+	}
+
+	if userSchema.Properties["username"].Example != "johndoe" {
+		t.Errorf("Expected Username example 'johndoe', got '%v'", userSchema.Properties["username"].Example)
+	}
+
+	// 测试解析Profile类型
+	profileSchema, err := resolver.ResolveType("models.Profile")
+	if err != nil {
+		t.Fatalf("Failed to resolve Profile type: %v", err)
+	}
+
+	// 验证Profile注释
+	expectedProfileComment := "Profile 定义了用户的详细资料"
+	if profileSchema.Description != expectedProfileComment {
+		t.Errorf("Expected Profile description '%s', got '%s'", expectedProfileComment, profileSchema.Description)
+	}
+
+	// 验证字段属性
+	if profileSchema.Properties["realName"].Description != "真实姓名" {
+		t.Errorf("Expected RealName description '真实姓名', got '%s'", profileSchema.Properties["realName"].Description)
+	}
+
+	if profileSchema.Properties["age"].Description != "年龄" {
+		t.Errorf("Expected Age description '年龄', got '%s'", profileSchema.Properties["age"].Description)
+	}
+
+	t.Logf("User schema: %+v", userSchema)
+	t.Logf("Profile schema: %+v", profileSchema)
+}
+
+func TestTypeResolver_ExtractTagValue(t *testing.T) {
+	resolver := NewTypeResolver(".")
+
+	testCases := []struct {
+		tagValue string
+		tagName  string
+		expected string
+	}{
+		{`json:"id"`, "json", "id"},
+		{`json:"username,omitempty"`, "json", "username,omitempty"},
+		{`binding:"required"`, "binding", "required"},
+		{`validate:"oneof=0 1"`, "validate", "oneof=0 1"},
+		{`example:"John Doe"`, "example", "John Doe"},
+		{`default:"1"`, "default", "1"},
+		{`json:"-"`, "json", "-"},
+		{`json:""`, "json", ""},
+	}
+
+	for _, tc := range testCases {
+		result := resolver.extractTagValue(tc.tagValue, tc.tagName)
+		if result != tc.expected {
+			t.Errorf("extractTagValue(%q, %q) = %q, expected %q", tc.tagValue, tc.tagName, result, tc.expected)
+		}
+	}
+}
+
+func TestTypeResolver_ExtractJSONFieldName(t *testing.T) {
+	resolver := NewTypeResolver(".")
+
+	testCases := []struct {
+		tagValue string
+		expected string
+	}{
+		{`json:"id"`, "id"},
+		{`json:"username,omitempty"`, "username"},
+		{`json:"-"`, ""},
+		{`json:""`, ""},
+		{`binding:"required"`, ""},
+		{``, ""},
+	}
+
+	for _, tc := range testCases {
+		result := resolver.extractJSONFieldName(tc.tagValue)
+		if result != tc.expected {
+			t.Errorf("extractJSONFieldName(%q) = %q, expected %q", tc.tagValue, result, tc.expected)
+		}
+	}
+}
+
+func TestTypeResolver_IsFieldRequired(t *testing.T) {
+	resolver := NewTypeResolver(".")
+
+	testCases := []struct {
+		tagValue string
+		expected bool
+	}{
+		{`binding:"required"`, true},
+		{`binding:"required,email"`, true},
+		{`validate:"required"`, true},
+		{`validate:"required,min=3"`, true},
+		{`binding:"email"`, false},
+		{`json:"username"`, false},
+		{``, false},
+	}
+
+	for _, tc := range testCases {
+		field := &ast.Field{
+			Tag: &ast.BasicLit{Value: tc.tagValue},
+		}
+		result := resolver.isFieldRequired(field)
+		if result != tc.expected {
+			t.Errorf("isFieldRequired(%q) = %v, expected %v", tc.tagValue, result, tc.expected)
+		}
+	}
+}
+
+// 辅助函数
+func contains(slice []string, item string) bool {
+	for _, s := range slice {
+		if s == item {
+			return true
+		}
+	}
+	return false
+} 
