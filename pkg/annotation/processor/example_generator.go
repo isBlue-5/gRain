@@ -26,10 +26,10 @@ func NewExampleGenerator(generator *Generator) *ExampleGenerator {
 		generator: generator,
 		examples:  make(map[string]ExampleTemplate),
 	}
-	
+
 	// 初始化示例模板
 	eg.initializeTemplates()
-	
+
 	return eg
 }
 
@@ -65,7 +65,7 @@ func (c *HelloController) Hello(ctx *gin.Context) {
 		},
 		Dependencies: []string{"github.com/gin-gonic/gin"},
 	}
-	
+
 	eg.examples["user_management"] = ExampleTemplate{
 		Name:        "User Management System",
 		Description: "A complete user management system with CRUD operations",
@@ -177,27 +177,27 @@ func (eg *ExampleGenerator) GenerateExample(name string) error {
 	if !exists {
 		return fmt.Errorf("example template %s not found", name)
 	}
-	
+
 	// 创建示例目录
 	exampleDir := filepath.Join(eg.generator.outputDir, "examples", name)
 	if err := os.MkdirAll(exampleDir, 0755); err != nil {
 		return fmt.Errorf("failed to create example directory: %w", err)
 	}
-	
+
 	// 生成示例应用代码
 	for fileName, content := range template.Files {
 		filePath := filepath.Join(exampleDir, fileName)
-		
+
 		// 确保目录存在
 		if err := os.MkdirAll(filepath.Dir(filePath), 0755); err != nil {
 			return fmt.Errorf("failed to create file directory: %w", err)
 		}
-		
+
 		if err := os.WriteFile(filePath, []byte(content), 0644); err != nil {
 			return fmt.Errorf("failed to write file %s: %w", fileName, err)
 		}
 	}
-	
+
 	// 生成go.mod文件
 	goModPath := filepath.Join(exampleDir, "go.mod")
 	goModContent := fmt.Sprintf(`module %s
@@ -206,17 +206,17 @@ go 1.21
 
 require (
 `, name)
-	
+
 	for _, dep := range template.Dependencies {
 		goModContent += fmt.Sprintf("\t%s v0.0.0\n", dep)
 	}
-	
+
 	goModContent += ")"
-	
+
 	if err := os.WriteFile(goModPath, []byte(goModContent), 0644); err != nil {
 		return fmt.Errorf("failed to write go.mod: %w", err)
 	}
-	
+
 	// 生成README文件
 	readmePath := filepath.Join(exampleDir, "README.md")
 	readmeContent := fmt.Sprintf(`# %s
@@ -226,8 +226,8 @@ require (
 ## Getting Started
 
 1. Navigate to this directory
-2. Run \`go mod tidy\` to download dependencies
-3. Run \`go run main.go\` to start the application
+2. Run go mod tidy to download dependencies
+3. Run go run main.go to start the application
 
 ## Features
 
@@ -237,11 +237,11 @@ This example demonstrates:
 - Service layer implementation
 - Repository pattern
 `, template.Name, template.Description)
-	
+
 	if err := os.WriteFile(readmePath, []byte(readmeContent), 0644); err != nil {
 		return fmt.Errorf("failed to write README: %w", err)
 	}
-	
+
 	return nil
 }
 
@@ -261,4 +261,4 @@ func (eg *ExampleGenerator) GetExampleInfo(name string) (*ExampleTemplate, error
 		return nil, fmt.Errorf("example template %s not found", name)
 	}
 	return &template, nil
-} 
+}
