@@ -18,6 +18,22 @@ gRain is an enterprise-grade Go Web framework built on top of Gin, designed with
 
 gRain 是基于 Gin 构建的企业级 Go Web 框架，秉承 **"让开发者专注业务逻辑，不影响性能"** 的设计理念。它提供了一套完整的工具和约定，消除样板代码，同时保持高性能和开发效率。
 
+### ❓ Why gRain | 为什么会出现
+
+- Go Web 开发常见痛点：样板代码多、路由/依赖/文档分散维护、反射型框架在运行期带来不透明与性能开销
+- 团队协作下可读性与一致性不足：不同风格的手写注册/绑定导致认知负担高、迭代成本大
+- 期望“类注解式”的开发效率，但不引入 Java 式运行时反射与隐式魔法
+- 需要在“开发体验、类型安全、可预测”与“性能”之间取得平衡
+
+gRain 通过“注解（Go 注释）+ 编译期代码生成”的方式，将依赖注入、路由注册、文档生成在构建阶段完成，运行时只加载已生成代码，既保持了开发效率，又确保了可读可审与高性能。
+
+- Common pain points in Go web development: excessive boilerplate; scattered maintenance of routes/deps/docs; runtime reflection causing opacity and overhead
+- Insufficient readability and consistency in team collaboration: hand-written registration/binding styles vary and increase cognitive load
+- Desire the convenience of annotation-like development without Java-style runtime reflection or implicit magic
+- Need to balance developer experience, type safety, predictability, and performance
+
+gRain leverages "annotations (Go comments) + compile-time code generation" to perform DI, route registration, and documentation at build time. Only generated code is loaded at runtime, preserving developer efficiency while staying readable, auditable, and high-performance.
+
 ### 🎯 Core Design Philosophy | 核心设计理念
 
 - **🔄 Convention over Configuration** - Smart defaults reduce decision fatigue
@@ -26,15 +42,20 @@ gRain 是基于 Gin 构建的企业级 Go Web 框架，秉承 **"让开发者专
 - **🏗️ Enterprise Ready** - Built for scalability, maintainability, and team collaboration
 - **🔧 Tooling Integration** - Seamless integration with Go ecosystem tools
 
-- **🔄 约定大于配置** - 智能默认值减少决策疲劳
+- **🔄 约定大于配置（适配性说明）** - 通过明晰的约定与生成规则减少重复决策；当业务需要时可显式覆盖，既高效又不牺牲可控性
 - **⚡ 性能优先** - 零反射开销，编译时优化
 - **🛠️ 开发者体验** - 专注业务逻辑，而非框架复杂性
 - **🏗️ 企业级就绪** - 为可扩展性、可维护性和团队协作而构建
 - **🔧 工具集成** - 与 Go 生态系统工具无缝集成
+- **🧭 显式优于隐式** - 通过显式注释声明依赖、路由与安全策略，杜绝黑盒魔法
+- **🧩 拥抱代码生成** - 以编译期代码生成（go generate）实现类型安全和零反射
 
 ## ✨ Key Features | 核心特性
 
 ### 🎭 Annotation-Driven Development | 注解驱动开发
+> Java-like "annotation-style development" experience, implemented the Go way: no runtime reflection, no hidden magic, and everything remains readable, auditable, and debuggable.
+> 类 Java 的“注解式开发”体验，但以 Go 风格实现：不使用运行时反射，不引入隐式魔法，所有行为可读、可审、可调试。
+
 ```go
 // frame:controller(path="/api/users")
 type UserController struct {
@@ -50,6 +71,32 @@ func (c *UserController) CreateUser(ctx *gin.Context) {
     // 专注业务逻辑，而非样板代码
 }
 ```
+
+### 🧠 Java-like Annotation Development, Implemented the Go Way | 类 Java 注解开发，但 Go 风格实现
+
+- Carrier of annotations: use Go source comments and struct tags to avoid intrusive syntax and macro-like magic
+- Processing time: AST-based compile-time parsing and code generation; zero runtime reflection or extra scanning
+- Maintainability: generated code is readable, committable, and auditable; clear debugging and diagnosis path
+- Controlled boundaries: conventions with explicit override points; avoid "convention as black box" and keep collaboration predictable
+
+- 注解承载体：采用 Go 源码注释与结构体标签，避免侵入式语法与宏式魔法
+- 处理时机：基于 AST 的编译期解析与代码生成，运行期零反射、零额外扫描
+- 可维护性：生成代码可读、可提交、可审查；问题定位与调试路径清晰
+- 可控边界：有约定也有显式覆盖点，避免“约定即黑盒”，保证团队协作可预期
+
+### 🆚 与 Spring Boot 对比 | Spring Boot Comparison
+
+- Similarities (体验相似)
+  - Auto route registration from annotations/comments (基于注释的自动路由注册)
+  - "Annotation-driven" development ergonomics (注解驱动的开发体验)
+  - API documentation generation (OpenAPI/Swagger) (自动生成 API 文档)
+  - Dependency management with minimal boilerplate (最少样板的依赖管理)
+
+- Differences (实现差异)
+  - Compile-time code generation, not runtime reflection (编译期生成而非运行时反射)
+  - Explicit over implicit; generated code checked into VCS (显式优于隐式，生成代码可提交)
+  - Go idioms: functional options, small interfaces, zero hidden lifecycle (Go 惯用法：函数选项、小接口、无隐式生命周期)
+  - Predictable startup: runtime only loads generated artifacts (可预测启动：运行期仅加载已生成产物)
 
 ### 🚀 Zero-Reflection Dependency Injection | 零反射依赖注入
 ```go
@@ -147,6 +194,15 @@ type AppConfig struct {
 └─────────────────────────────────────────────────────────────┘
 ```
 
+### 🧭 与开发计划对齐的设计要点
+
+- 明确坚持“显式优于隐式”：通过 Go 注释形式的注解显式声明依赖、路由与安全策略
+- 编译期完成“零反射”能力：默认通过代码生成实现依赖注入、路由注册与文档产出
+- 推荐在构建阶段运行代码生成：本地和 CI 中执行 `go generate ./...`，生成产物可提交
+- 运行时不引入黑盒魔法：启动阶段仅加载已生成代码，保持可预测性与可调试性
+- 以“约定优于配置”为主：提供合理默认与约束，减少样板与配置负担
+- 强调类型安全与开发者体验：避免隐式行为带来的调试成本
+
 ## 🚀 Quick Start | 快速开始
 
 ### 📦 Installation | 安装
@@ -181,16 +237,15 @@ func main() {
     app := app.New(
         app.WithPort("8080"),
         app.WithDebug(true),
-        app.WithAutoGenerate(true), // 启用自动代码生成 | Enable auto code generation
+        app.WithAutoGenerate(true), // 启用开发期自动代码生成集成 | Enable dev-time auto code generation integration
     )
 
-    // 运行应用 - 框架会自动处理一切！
-    // Run application - framework handles everything automatically!
+    // 运行应用
     app.Run()
 }
 ```
 
-### ✨ 开箱即用 | Out of the Box
+### ✨ 推荐使用方式 | Recommended Way
 
 **无需运行任何命令！框架会在应用启动时自动完成所有工作：**
 
@@ -207,7 +262,10 @@ func main() {
 
 - 🔄 **自动依赖注入** - 编译时依赖注入，零反射开销
 - 🔄 **Auto Dependency Injection** - Compile-time dependency injection, zero reflection overhead
-
+- **生产环境**：在构建阶段运行代码生成（`go generate ./...` 或集成 ginframe-gen），将生成代码提交或打包入镜像，确保运行时零反射、无隐式生成步骤
+- **开发环境**：可开启内置的自动生成集成或使用 `-watch` 模式的生成器以提升效率
+- **收益**：类型安全、可预测的启动路径，更易排查问题，契合 Go 风格
+  
 ### 🔧 传统方式（可选）| Traditional Way (Optional)
 
 如果您需要手动控制代码生成过程：
@@ -229,6 +287,8 @@ ginframe-gen -pkg ./controllers -output ./generated
 ```
 
 ## 🎭 Annotation System | 注解系统
+
+> 注解以 Go 注释为载体，强调可读、可审查与显式性；所有“魔法”在编译期完成，运行时仅加载生成代码。
 
 ### 📝 Controller Annotations | 控制器注解
 
@@ -344,7 +404,7 @@ func main() {
     if err := loader.Load(cfg); err != nil {
         panic(err)
     }
-    
+
     // Use configuration
     // 使用配置
     app := app.New(
