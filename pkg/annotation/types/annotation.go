@@ -4,6 +4,7 @@ package types
 import (
 	"go/ast"
 	"go/token"
+	"go/types"
 	"reflect"
 )
 
@@ -91,6 +92,9 @@ type StructTagAnnotation struct {
 	StructField *ast.Field            // AST中的结构体字段
 	StructType  *ast.StructType       // AST中的结构体类型
 	StructName  string                // 结构体名称
+
+	// 新增：类型信息
+	FieldType types.Type // 字段的类型信息
 }
 
 // CommentAnnotation 表示注释注解
@@ -105,6 +109,10 @@ type CommentAnnotation struct {
 	Comment      *ast.Comment          // AST中的注释
 	Node         ast.Node              // 相关的AST节点
 	ReceiverType string                // 方法接收者类型（仅对方法有效）
+
+	// 新增：类型信息
+	MethodSignature *types.Signature // 方法签名（仅对方法有效）
+	TypeInfo        types.Type       // 相关的类型信息
 }
 
 // Annotation 通用注解接口

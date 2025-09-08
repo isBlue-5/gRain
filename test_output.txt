@@ -1,0 +1,306 @@
+=== RUN   TestCodeGenerationQuality
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go
+DEBUG: 解析到注解: // @frame:controller, 类型: controller, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go 解析到 6 个注解
+从路径 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go 解析到 6 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go
+DEBUG: 解析到注解: // @frame:service, 类型: service, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go 解析到 3 个注解
+从路径 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go 解析到 3 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go
+DEBUG: 解析到注解: // @frame:entity, 类型: entity, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go 解析到 1 个注解
+从路径 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go 解析到 1 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go
+DEBUG: 解析到注解: // @frame:repository, 类型: repository, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go 解析到 1 个注解
+从路径 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go 解析到 1 个注解
+总共注册了 11 个注解
+DEBUG: 开始处理路由注解...
+DEBUG: 找到 1 个ControllerType注解
+DEBUG: 找到 1 个controller注解
+DEBUG: 处理注解: 类型=controller, 目标类型=type, 目标名称=UserController
+DEBUG: 添加控制器: UserController
+DEBUG: 处理注解: 类型=controller, 目标类型=type, 目标名称=UserController
+DEBUG: 添加控制器: UserController
+DEBUG: 找到 5 个RouteType注解
+DEBUG: 找到 5 个route注解
+DEBUG: 处理路由注解: 类型=route, 目标类型=method, 目标名称=Index
+DEBUG: 添加路由: UserController -> Index
+DEBUG: 处理路由注解: 类型=route, 目标类型=method, 目标名称=Show
+DEBUG: 添加路由: UserController -> Show
+DEBUG: 处理路由注解: 类型=route, 目标类型=method, 目标名称=Store
+DEBUG: 添加路由: UserController -> Store
+DEBUG: 处理路由注解: 类型=route, 目标类型=method, 目标名称=Update
+DEBUG: 添加路由: UserController -> Update
+DEBUG: 处理路由注解: 类型=route, 目标类型=method, 目标名称=Destroy
+DEBUG: 添加路由: UserController -> Destroy
+DEBUG: 处理路由注解: 类型=route, 目标类型=method, 目标名称=Index
+DEBUG: 添加路由: UserController -> Index
+DEBUG: 处理路由注解: 类型=route, 目标类型=method, 目标名称=Show
+DEBUG: 添加路由: UserController -> Show
+DEBUG: 处理路由注解: 类型=route, 目标类型=method, 目标名称=Store
+DEBUG: 添加路由: UserController -> Store
+DEBUG: 处理路由注解: 类型=route, 目标类型=method, 目标名称=Update
+DEBUG: 添加路由: UserController -> Update
+DEBUG: 处理路由注解: 类型=route, 目标类型=method, 目标名称=Destroy
+DEBUG: 添加路由: UserController -> Destroy
+DEBUG: 找到 2 个控制器, 10 个路由
+DEBUG: 路由归类结果: map[UserController:[{ReceiverType:UserController FuncName:Index Method:GET Path: Position:{Filename:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go Line:16 Column:1} RequiredRoles:[] RequiredPermissions:[] HasValidation:false ValidationRules: ValidateGroups:[] BindSource: BindModel: PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T Middlewares:[] Annotation:0xc00015c420} {ReceiverType:UserController FuncName:Show Method:GET Path: Position:{Filename:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go Line:22 Column:1} RequiredRoles:[] RequiredPermissions:[] HasValidation:false ValidationRules: ValidateGroups:[] BindSource: BindModel: PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T Middlewares:[] Annotation:0xc00015c4d0} {ReceiverType:UserController FuncName:Store Method:GET Path: Position:{Filename:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go Line:29 Column:1} RequiredRoles:[] RequiredPermissions:[] HasValidation:false ValidationRules: ValidateGroups:[] BindSource: BindModel: PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T Middlewares:[] Annotation:0xc00015c580} {ReceiverType:UserController FuncName:Update Method:GET Path: Position:{Filename:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go Line:35 Column:1} RequiredRoles:[] RequiredPermissions:[] HasValidation:false ValidationRules: ValidateGroups:[] BindSource: BindModel: PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T Middlewares:[] Annotation:0xc00015c630} {ReceiverType:UserController FuncName:Destroy Method:GET Path: Position:{Filename:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go Line:42 Column:1} RequiredRoles:[] RequiredPermissions:[] HasValidation:false ValidationRules: ValidateGroups:[] BindSource: BindModel: PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T Middlewares:[] Annotation:0xc00015c790} {ReceiverType:UserController FuncName:Index Method:GET Path: Position:{Filename:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go Line:16 Column:1} RequiredRoles:[] RequiredPermissions:[] HasValidation:false ValidationRules: ValidateGroups:[] BindSource: BindModel: PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T Middlewares:[] Annotation:0xc00015c420} {ReceiverType:UserController FuncName:Show Method:GET Path: Position:{Filename:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go Line:22 Column:1} RequiredRoles:[] RequiredPermissions:[] HasValidation:false ValidationRules: ValidateGroups:[] BindSource: BindModel: PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T Middlewares:[] Annotation:0xc00015c4d0} {ReceiverType:UserController FuncName:Store Method:GET Path: Position:{Filename:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go Line:29 Column:1} RequiredRoles:[] RequiredPermissions:[] HasValidation:false ValidationRules: ValidateGroups:[] BindSource: BindModel: PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T Middlewares:[] Annotation:0xc00015c580} {ReceiverType:UserController FuncName:Update Method:GET Path: Position:{Filename:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go Line:35 Column:1} RequiredRoles:[] RequiredPermissions:[] HasValidation:false ValidationRules: ValidateGroups:[] BindSource: BindModel: PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T Middlewares:[] Annotation:0xc00015c630} {ReceiverType:UserController FuncName:Destroy Method:GET Path: Position:{Filename:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go Line:42 Column:1} RequiredRoles:[] RequiredPermissions:[] HasValidation:false ValidationRules: ValidateGroups:[] BindSource: BindModel: PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T Middlewares:[] Annotation:0xc00015c790}]]
+DEBUG: 控制器 UserController 有 10 个路由
+DEBUG: 开始生成路由代码: 控制器=UserController, 路由数=10
+DEBUG: 模板数据准备完成: {PackageName:T Imports:[] ControllerName:UserController PathPrefix: Routes:[{MethodName:Index HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Show HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Store HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Update HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Destroy HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Index HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Show HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Store HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Update HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Destroy HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]}]}
+DEBUG: controller.PkgPath = /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T, os.TempDir() = /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/
+DEBUG: 修复后的路径比较: controller.PkgPath = /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T, tempDir = /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T, isTestEnv = true
+DEBUG: 使用测试环境路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/route
+DEBUG: 输出目录: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/route
+DEBUG: 输出文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/route/user_route_gen.go
+DEBUG: 路由代码生成成功: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/route/user_route_gen.go
+DEBUG: 控制器 UserController 有 10 个路由
+DEBUG: 开始生成路由代码: 控制器=UserController, 路由数=10
+DEBUG: 模板数据准备完成: {PackageName:T Imports:[] ControllerName:UserController PathPrefix: Routes:[{MethodName:Index HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Show HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Store HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Update HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Destroy HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Index HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Show HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Store HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Update HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]} {MethodName:Destroy HttpMethod:GET Path: Controller:UserController HasValidation:false BindModel: BindSource: BindSourceUpper: RequiredRoles:[] Middlewares:[]}]}
+DEBUG: controller.PkgPath = /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T, os.TempDir() = /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/
+DEBUG: 修复后的路径比较: controller.PkgPath = /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T, tempDir = /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T, isTestEnv = true
+DEBUG: 使用测试环境路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/route
+DEBUG: 输出目录: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/route
+DEBUG: 输出文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/route/user_route_gen.go
+DEBUG: 路由代码生成成功: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/route/user_route_gen.go
+DEBUG: 路由注解处理完成
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go
+DEBUG: 解析到注解: // @frame:controller, 类型: controller, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go 解析到 6 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go
+DEBUG: 解析到注解: // @frame:service, 类型: service, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go 解析到 3 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go
+DEBUG: 解析到注解: // @frame:entity, 类型: entity, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go 解析到 1 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go
+DEBUG: 解析到注解: // @frame:repository, 类型: repository, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go 解析到 1 个注解
+DEBUG: 开始处理实体注解...
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go
+DEBUG: 解析到注解: // @frame:controller, 类型: controller, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go 解析到 6 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go
+DEBUG: 解析到注解: // @frame:service, 类型: service, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go 解析到 3 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go
+DEBUG: 解析到注解: // @frame:entity, 类型: entity, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go 解析到 1 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go
+DEBUG: 解析到注解: // @frame:repository, 类型: repository, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go 解析到 1 个注解
+DEBUG: 开始生成仓库代码: User
+DEBUG: 输出目录: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/entity
+DEBUG: 输出文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/entity/user_entity_gen.go
+DEBUG: 执行模板，数据: &{Name:User TableName:user PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T PkgName:p8bqbk6s5nz8rdzgd8m9g9v80000gn Fields:[0xc0008c02d0 0xc0008c0360 0xc0008c03f0] Imports:map[] HasID:true IDField:0xc0008c02d0 Comment: Annotation:0xc000944000}
+DEBUG: 仓库代码生成成功: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/entity/user_entity_gen.go
+DEBUG: 实体注解处理完成
+DEBUG: 开始处理服务注解...
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go
+DEBUG: 解析到注解: // @frame:controller, 类型: controller, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go 解析到 6 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go
+DEBUG: 解析到注解: // @frame:service, 类型: service, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go 解析到 3 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go
+DEBUG: 解析到注解: // @frame:entity, 类型: entity, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go 解析到 1 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go
+DEBUG: 解析到注解: // @frame:repository, 类型: repository, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go 解析到 1 个注解
+DEBUG: 开始生成服务代码: UserService
+DEBUG: 输出目录: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/service
+DEBUG: 输出文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/service/user_service_gen.go
+DEBUG: 执行模板，数据: &{Name:UserService PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T PkgName:p8bqbk6s5nz8rdzgd8m9g9v80000gn Methods:[0xc000760180 0xc0007601e0] Imports:map[] Comment: Annotation:0xc000944580}
+DEBUG: 服务代码生成成功: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/service/user_service_gen.go
+DEBUG: 服务注解处理完成
+DEBUG: 开始处理仓库注解...
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go
+DEBUG: 解析到注解: // @frame:controller, 类型: controller, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go 解析到 6 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go
+DEBUG: 解析到注解: // @frame:service, 类型: service, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go 解析到 3 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go
+DEBUG: 解析到注解: // @frame:entity, 类型: entity, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go 解析到 1 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go
+DEBUG: 解析到注解: // @frame:repository, 类型: repository, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go 解析到 1 个注解
+DEBUG: 开始生成仓库代码: UserRepository
+DEBUG: 输出目录: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/repository
+DEBUG: 输出文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/repository/user_repository_gen.go
+DEBUG: 执行模板，数据: &{Name:UserRepository EntityName:User PkgPath:/var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T PkgName:p8bqbk6s5nz8rdzgd8m9g9v80000gn Methods:[0xc000760780 0xc0007607e0] Imports:map[] Comment: Annotation:0xc00015d340}
+DEBUG: 仓库代码生成成功: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/repository/user_repository_gen.go
+DEBUG: 仓库注解处理完成
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go
+DEBUG: 解析到注解: // @frame:controller, 类型: controller, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go 解析到 6 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go
+DEBUG: 解析到注解: // @frame:service, 类型: service, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go 解析到 3 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go
+DEBUG: 解析到注解: // @frame:entity, 类型: entity, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go 解析到 1 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go
+DEBUG: 解析到注解: // @frame:repository, 类型: repository, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go 解析到 1 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go
+DEBUG: 解析到注解: // @frame:controller, 类型: controller, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go 解析到 6 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go
+DEBUG: 解析到注解: // @frame:service, 类型: service, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go 解析到 3 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go
+DEBUG: 解析到注解: // @frame:entity, 类型: entity, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go 解析到 1 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go
+DEBUG: 解析到注解: // @frame:repository, 类型: repository, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go 解析到 1 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go
+DEBUG: 解析到注解: // @frame:controller, 类型: controller, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_controller.go 解析到 6 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go
+DEBUG: 解析到注解: // @frame:service, 类型: service, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_service.go 解析到 3 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go
+DEBUG: 解析到注解: // @frame:entity, 类型: entity, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_entity.go 解析到 1 个注解
+解析包路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go (绝对路径: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go)
+解析文件: /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go
+DEBUG: 解析到注解: // @frame:repository, 类型: repository, 属性: 
+从文件 /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/user_repository.go 解析到 1 个注解
+DEBUG: 解析到注解: // @frame:controller, 类型: controller, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:service, 类型: service, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:entity, 类型: entity, 属性: 
+DEBUG: 解析到注解: // @frame:repository, 类型: repository, 属性: 
+DEBUG: 解析到注解: // @frame:controller, 类型: controller, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:route, 类型: route, 属性: 
+DEBUG: 解析到注解: // @frame:service, 类型: service, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:method, 类型: method, 属性: 
+DEBUG: 解析到注解: // @frame:entity, 类型: entity, 属性: 
+DEBUG: 解析到注解: // @frame:repository, 类型: repository, 属性: 
+✅ 代码验证通过，未发现任何问题
+
+--- 代码生成统计信息 ---
+处理总文件数: 4
+变更文件数: 4
+缓存文件数: 0
+处理时间: 357.18741ms
+
+注解统计:
+  - controller: 1 个
+  - route: 5 个
+  - service: 1 个
+  - method: 2 个
+  - entity: 1 个
+  - repository: 1 个
+------------------------
+    quality_enhanced_test.go:54: Generated code compilation failed for /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/route/user_route_gen.go: exit status 1
+    quality_enhanced_test.go:54: Generated code compilation failed for /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/entity/user_entity_gen.go: exit status 1
+    quality_enhanced_test.go:54: Generated code compilation failed for /var/folders/7s/p8bqbk6s5nz8rdzgd8m9g9v80000gn/T/TestCodeGenerationQuality1154151960/001/repository/user_repository_gen.go: exit status 1
+--- FAIL: TestCodeGenerationQuality (1.08s)
+FAIL
+FAIL	github.com/isBlue-5/grain/pkg/annotation/processor	1.895s
+FAIL
