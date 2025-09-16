@@ -43,7 +43,7 @@ func TestNextGenParser_GetMethodSignature(t *testing.T) {
 
 	// 测试方法签名获取
 	sig, err := parser.GetMethodSignature(nil)
-	assert.Nil(t, err) // 当前实现返回nil
+	assert.Error(t, err) // 应该返回错误，因为传入了nil
 	assert.Nil(t, sig)
 }
 
