@@ -13,7 +13,7 @@ import (
 // CodeValidator 代码质量验证器
 type CodeValidator struct {
 	// 验证规则
-	rules []ValidationRule
+	rules []CodeValidationRule
 
 	// 错误收集
 	errors []ValidationError
@@ -22,8 +22,8 @@ type CodeValidator struct {
 	warnings []ValidationWarning
 }
 
-// ValidationRule 验证规则接口
-type ValidationRule interface {
+// CodeValidationRule 代码验证规则接口
+type CodeValidationRule interface {
 	Validate(code string, filePath string) []ValidationError
 }
 
@@ -44,19 +44,10 @@ type ValidationWarning struct {
 	Message string
 }
 
-// ErrorSeverity 错误严重程度
-type ErrorSeverity int
-
-const (
-	SeverityError ErrorSeverity = iota
-	SeverityWarning
-	SeverityInfo
-)
-
 // NewCodeValidator 创建新的代码验证器
 func NewCodeValidator() *CodeValidator {
 	cv := &CodeValidator{
-		rules:    make([]ValidationRule, 0),
+		rules:    make([]CodeValidationRule, 0),
 		errors:   make([]ValidationError, 0),
 		warnings: make([]ValidationWarning, 0),
 	}
